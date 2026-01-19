@@ -1,0 +1,9 @@
+# This directory is for exported FullStory data files
+#
+# Place your exports here:
+# - sessions_YYYY-MM-DD.csv
+# - events_YYYY-MM-DD.json
+# - users_YYYY-MM-DD.json
+#
+# Note: Large data files should not be committed to git.
+# Add them to .gitignore if needed.

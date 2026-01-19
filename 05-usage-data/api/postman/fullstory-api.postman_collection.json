@@ -1,0 +1,357 @@
+{
+  "info": {
+    "_postman_id": "fullstory-api-collection",
+    "name": "FullStory API",
+    "description": "Collection for FullStory Data Export and Server APIs.\n\n## Setup\n1. Import this collection into Postman\n2. Create an environment with your `api_key` variable\n3. Set `base_url` to `https://api.fullstory.com`\n\n## Authentication\nAll requests use Basic Auth with your API key as the username (password empty).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{api_key}}",
+        "type": "string"
+      },
+      {
+        "key": "password",
+        "value": "",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://api.fullstory.com"
+    }
+  ],
+  "item": [
+    {
+      "name": "Data Export",
+      "description": "Endpoints for bulk data export",
+      "item": [
+        {
+          "name": "List Segments",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v2/segments",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "segments"]
+            },
+            "description": "Get all available segments that can be used for data export."
+          },
+          "response": []
+        },
+        {
+          "name": "Create Event Export",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"EVENT\",\n  \"format\": \"JSON\",\n  \"start\": \"2024-01-01T00:00:00Z\",\n  \"end\": \"2024-01-31T23:59:59Z\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v2/segments/{{segment_id}}/exports",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "segments", "{{segment_id}}", "exports"]
+            },
+            "description": "Create a new event data export for a specific segment.\n\nSet the `segment_id` variable or replace it with your segment ID."
+          },
+          "response": []
+        },
+        {
+          "name": "Create Session Export",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"SESSION\",\n  \"format\": \"CSV\",\n  \"start\": \"2024-01-01T00:00:00Z\",\n  \"end\": \"2024-01-31T23:59:59Z\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v2/segments/{{segment_id}}/exports",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "segments", "{{segment_id}}", "exports"]
+            },
+            "description": "Create a new session data export for a specific segment."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Export Status",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v2/exports/{{export_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "exports", "{{export_id}}"]
+            },
+            "description": "Check the status of a data export job.\n\nSet `export_id` to the ID returned from Create Export."
+          },
+          "response": []
+        },
+        {
+          "name": "List Exports",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v2/exports",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "exports"]
+            },
+            "description": "List all export jobs."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Sessions",
+      "description": "Session search and retrieval",
+      "item": [
+        {
+          "name": "Search Sessions",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": {\n    \"type\": \"AND\",\n    \"filters\": [\n      {\n        \"type\": \"EVENT\",\n        \"eventType\": \"page\"\n      }\n    ]\n  },\n  \"start\": \"2024-01-01T00:00:00Z\",\n  \"end\": \"2024-01-31T23:59:59Z\",\n  \"limit\": 100\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v2/sessions/search",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "sessions", "search"]
+            },
+            "description": "Search for sessions matching specific criteria."
+          },
+          "response": []
+        },
+        {
+          "name": "Search Sessions with Rage Clicks",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": {\n    \"type\": \"FRUSTRATION_SIGNAL\",\n    \"signalType\": \"rage_click\"\n  },\n  \"start\": \"2024-01-01T00:00:00Z\",\n  \"end\": \"2024-01-31T23:59:59Z\",\n  \"limit\": 50\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v2/sessions/search",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "sessions", "search"]
+            },
+            "description": "Find sessions containing rage clicks (frustration signals)."
+          },
+          "response": []
+        },
+        {
+          "name": "Search Sessions by Page URL",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": {\n    \"type\": \"EVENT\",\n    \"eventType\": \"page\",\n    \"properties\": {\n      \"url\": {\n        \"contains\": \"/checkout\"\n      }\n    }\n  },\n  \"start\": \"2024-01-01T00:00:00Z\",\n  \"end\": \"2024-01-31T23:59:59Z\",\n  \"limit\": 100\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v2/sessions/search",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "sessions", "search"]
+            },
+            "description": "Find sessions where users visited a specific page."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Session Details",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v2/sessions/{{session_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "sessions", "{{session_id}}"]
+            },
+            "description": "Get details for a specific session."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "description": "User management and custom properties",
+      "item": [
+        {
+          "name": "Get User",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/v2/users/{{user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "users", "{{user_id}}"]
+            },
+            "description": "Get user details by user ID."
+          },
+          "response": []
+        },
+        {
+          "name": "Update User Properties",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"displayName\": \"Jane Smith\",\n  \"email\": \"jane@example.com\",\n  \"properties\": {\n    \"accountType\": \"enterprise\",\n    \"companySize\": 500,\n    \"industry\": \"technology\"\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v2/users/{{user_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "users", "{{user_id}}"]
+            },
+            "description": "Update user properties (custom variables)."
+          },
+          "response": []
+        },
+        {
+          "name": "Send Custom Event",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Subscription_Upgraded\",\n  \"timestamp\": \"2024-01-15T14:30:00Z\",\n  \"properties\": {\n    \"plan\": \"enterprise\",\n    \"previousPlan\": \"pro\",\n    \"revenue\": 299.00\n  }\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v2/users/{{user_id}}/events",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "users", "{{user_id}}", "events"]
+            },
+            "description": "Send a custom event for a user from your backend."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Metrics",
+      "description": "Aggregated metrics and analytics",
+      "item": [
+        {
+          "name": "Get Active Users Count",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"metric\": \"unique_users\",\n  \"start\": \"2024-01-01T00:00:00Z\",\n  \"end\": \"2024-01-31T23:59:59Z\",\n  \"granularity\": \"day\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v2/metrics",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "metrics"]
+            },
+            "description": "Get aggregated user metrics over time."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Session Metrics",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"metric\": \"session_count\",\n  \"start\": \"2024-01-01T00:00:00Z\",\n  \"end\": \"2024-01-31T23:59:59Z\",\n  \"granularity\": \"week\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/v2/metrics",
+              "host": ["{{base_url}}"],
+              "path": ["v2", "metrics"]
+            },
+            "description": "Get session count metrics over time."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

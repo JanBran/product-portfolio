@@ -1,0 +1,9 @@
+# Ignore exported data files (can be large)
+*.csv
+*.json
+*.gz
+*.zip
+
+# Keep the gitkeep
+!.gitkeep
+!.gitignore

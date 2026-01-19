@@ -1,3 +1,7 @@
+> **Status:** MOVED TO DEVELOPMENT
+> **GitHub Issue:** [#2 - Client Booking Links](https://github.com/JanBran/product-portfolio/issues/2)
+> **Date:** 2026-01-19
+
 # Feature Spec: Client Booking Links
 
 ## Overview

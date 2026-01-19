@@ -1,3 +1,7 @@
+> **Status:** MOVED TO DEVELOPMENT
+> **GitHub Issue:** [#1 - Calendar Sync & Integration](https://github.com/JanBran/product-portfolio/issues/1)
+> **Date:** 2026-01-19
+
 # Feature Spec: Calendar Sync & Integration
 
 ## Overview

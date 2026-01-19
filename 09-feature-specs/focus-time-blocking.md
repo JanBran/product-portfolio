@@ -1,3 +1,7 @@
+> **Status:** MOVED TO DEVELOPMENT
+> **GitHub Issue:** [#3 - Focus Time Blocking](https://github.com/JanBran/product-portfolio/issues/3)
+> **Date:** 2026-01-19
+
 # Feature Spec: Focus Time Blocking
 
 ## Overview

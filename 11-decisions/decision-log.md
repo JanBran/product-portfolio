@@ -18,6 +18,9 @@ Chronological record of significant product decisions.
 | 2025-04-01 | [D-008](decisions/2025-04-01-clerk-auth.md) | Choose Clerk for authentication | Technical | TD-007 |
 | 2025-04-20 | [D-009](decisions/2025-04-20-outlook-sync.md) | Add Outlook sync for Q2 | Feature | Spec 002 |
 | 2025-05-01 | [D-010](decisions/2025-05-01-expand-free-tier.md) | Expand free tier to 5 calendars | Pricing | — |
+| 2026-01-19 | D-014 | Calendar Sync & Integration moved to development | Feature | [Issue #1](https://github.com/JanBran/product-portfolio/issues/1) |
+| 2026-01-19 | D-015 | Client Booking Links moved to development | Feature | [Issue #2](https://github.com/JanBran/product-portfolio/issues/2) |
+| 2026-01-19 | D-016 | Focus Time Blocking moved to development | Feature | [Issue #3](https://github.com/JanBran/product-portfolio/issues/3) |
 
 ---
 

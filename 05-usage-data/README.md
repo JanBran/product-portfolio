@@ -32,7 +32,6 @@ Usage data answers critical questions:
 
 ## Contents
 
-- [analytics-dashboards.md](./analytics-dashboards.md) - Dashboard configurations and key views
 - [api/](./api/) - API references and Postman collections for data export
 - [python-analysis/](./python-analysis/) - Scripts and notebooks for local analysis
 - [queries/](./queries/) - Saved search queries and segment definitions
@@ -54,7 +53,7 @@ Usage data answers critical questions:
 - See `.env.example` in [python-analysis/](./python-analysis/) for required environment variables
 - PII should be masked in session replays
 - Data retention is configured in the analytics tool settings
-- See [Metrics Definitions](../03-goals-metrics/success-metrics/metrics-definitions.md) for standardized definitions
+- Metrics definitions will be added to `03-goals-metrics/` once dashboards are configured
 
 ---
 

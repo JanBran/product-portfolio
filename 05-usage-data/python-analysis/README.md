@@ -265,6 +265,5 @@ for chunk in chunks:
 
 - [FullStory API Reference](../api/fullstory-api-reference.md)
 - [Postman Collection](../api/postman/)
-- [Analytics Dashboards](../analytics-dashboards.md)
 - [pandas Documentation](https://pandas.pydata.org/docs/)
 - [matplotlib Documentation](https://matplotlib.org/stable/contents.html)

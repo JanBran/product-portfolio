@@ -28,17 +28,8 @@ Product documentation for **Simple Calendar** — a minimal, fast calendar appli
 - [06-opportunity-solution-trees/](06-opportunity-solution-trees/) - OSTs by objective
 - [08-technical-context/architecture-overview.md](08-technical-context/architecture-overview.md) - System architecture
 - [09-feature-specs/](09-feature-specs/) - Feature specifications
-- [10-roadmap/current-roadmap.md](10-roadmap/current-roadmap.md) - Current roadmap
+- [10-roadmap/](10-roadmap/) - Roadmap information
 - [11-decisions/decision-log.md](11-decisions/decision-log.md) - Decision log
-
-### Quick Reference Files
-- [product/vision.md](product/vision.md) - Vision summary
-- [product/goals.md](product/goals.md) - Goals summary
-- [product/decisions.md](product/decisions.md) - Key decisions summary
-- [research/user-insights.md](research/user-insights.md) - User research summary
-- [research/competitors.md](research/competitors.md) - Competitive landscape summary
-- [specs/001-calendar-mvp.md](specs/001-calendar-mvp.md) - MVP specification
-- [roadmap/current.md](roadmap/current.md) - Roadmap summary
 
 ## Guidelines
 
@@ -48,7 +39,6 @@ Product documentation for **Simple Calendar** — a minimal, fast calendar appli
 - Update roadmap when features ship
 - Log decisions in `11-decisions/decision-log.md`
 - Use numbered folders for detailed documentation
-- Use quick reference folders for summaries
 
 ## Product spec assistant
 

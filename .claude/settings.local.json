@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(test:*)",
+      "Bash(for folder in \"product\" \"research\" \"specs\" \"roadmap\")",
+      "Bash(do test:*)",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Bash(for file in \"product/vision.md\" \"product/goals.md\" \"product/decisions.md\" \"research/user-insights.md\" \"research/competitors.md\" \"specs/001-calendar-mvp.md\" \"roadmap/current.md\")"
+    ]
+  }
+}

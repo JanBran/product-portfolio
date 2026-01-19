@@ -287,4 +287,3 @@ Use the "Search Sessions" requests in the [Postman Collection](../api/postman/).
 
 - [FullStory API Reference](../api/fullstory-api-reference.md)
 - [Python Analysis Scripts](../python-analysis/)
-- [Analytics Dashboards](../analytics-dashboards.md)

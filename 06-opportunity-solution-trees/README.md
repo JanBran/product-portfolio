@@ -31,9 +31,9 @@ OSTs prevent teams from jumping straight to solutions. They create a structured 
 
 ## Contents
 
-- [Current OST](current-ost.md) — Active opportunity solution tree
-- [Opportunity Briefs](opportunity-briefs/) — Detailed briefs for each opportunity
-- [Archive](archive/) — Historical OST snapshots
+- [User Acquisition OST](user-acquisition.md) — OST for user acquisition objective
+- [User Retention OST](user-retention.md) — OST for user retention objective
+- [Recurring Revenue OST](recurring-revenue.md) — OST for recurring revenue objective
 
 ## Related Folders
 

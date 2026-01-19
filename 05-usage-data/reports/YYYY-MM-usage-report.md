@@ -168,4 +168,4 @@
 
 ### Related Documents
 - [Previous Month's Report](./YYYY-MM-usage-report.md)
-- [Metrics Definitions](../02-goals-metrics/success-metrics/metrics-definitions.md)
+- [Metrics Definitions](../../03-goals-metrics/success-metrics/metrics-definitions.md)

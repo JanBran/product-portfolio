@@ -13,7 +13,7 @@
 ## Related Folders
 
 - [Feature Specs](../09-feature-specs/) — Detailed specifications pushed to development
-- [Spec Templates](../09-feature-specs/templates/) — Templates for creating new specs
+- [Spec Templates](.github\ISSUE_TEMPLATE\feature-spec.md) — Templates for creating new specs
 - [Opportunity Solution Trees](../06-opportunity-solution-trees/) — Where feature ideas originate
 - [Technical Context](../08-technical-context/) — Architecture and technical decisions
 - [Decision Log](../11-decisions/) — Record of key decisions made

@@ -1,10 +1,8 @@
-# Simple Calendar - Product Portfolio
+# Simple Calendar - Product Framework
 
-A lightweight product management structure for a simple calendar application. Demonstrates AI-assisted product management using Claude Code, VS Code, and GitHub.
+The purpose of this repository is to showcase the current options for utilizing AI tools for product management. For the demonstration of the entire product management setup, I used a light weight calendar solution.
 
-## Product Overview
-
-For the demonstration of the entire product management setup, I used a light weight calendar solution.
+This solution utilizes github for storage and issue tracking, VS Code for tracking and submitting changes and Claude Code extension in VS Code for the agentic work. The VS Code also has MCP server for Github actions and issues implemented.
 
 As an elevator pitch, **Simple Calendar** is a minimal, fast calendar app for individuals who want basic scheduling without complexity. View events, add events, and stay organized.
 
